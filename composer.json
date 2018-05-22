@@ -1,0 +1,13 @@
+{
+    "name": "ricardotulio/php-foo-bar",
+    "description": "Foo bar challenge in PHP",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ricardo Ledo de Tulio",
+            "email": "ledo.tulio@gmail.com"
+        }
+    ],
+    "require": {}
+}
