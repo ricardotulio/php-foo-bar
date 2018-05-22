@@ -39,3 +39,12 @@ or
 ```
 $ composer test
 ```
+
+### Running Code Sniffer
+Just run `$ composer run phpcs`
+
+### Running Mess Detector
+Just run `$ composer run phpmd`
+
+### Running both Code Sniffer and Mess Detector
+Just run `$ composer run lint`
