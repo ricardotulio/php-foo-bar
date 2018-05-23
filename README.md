@@ -13,7 +13,7 @@ three print "Foo" instead of the number and for the multiples of five print
 - Composer
 
 ## Setup
-Run `$composer install` to generate autoload and install development dependencies.
+Run `$ composer install` to generate autoload and install development dependencies.
 
 ## Running FooBar
 To run this code, you just need to execute the following command:
@@ -39,5 +39,19 @@ Run `$ composer run lint`.
 ## Considerations
 
 You can use docker instead of php and composer. To run project using docker,
-you just need to replace `$ php ...` for `$ docker run --rm -it -v $(pwd):$(pwd) -w $(pwd) php:7.2-cli-alpine ...`.
-To run tests and linters, you need to replace `$ composer ...` for `$ docker run --rm -it -v $(pwd):$(pwd) -w $(pwd) composer ...`.
+you just need to replace
+
+`$ php ...`
+
+for
+
+`$ docker run --rm -it -v $(pwd):$(pwd) -w $(pwd) php:7.2-cli-alpine php ...`.
+
+
+To run tests and linters, you need to replace
+
+`$ composer ...`
+
+for
+
+`$ docker run --rm -it -v $(pwd):$(pwd) -w $(pwd) composer composer ...`.
