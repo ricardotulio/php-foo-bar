@@ -3,48 +3,41 @@
 FooBar is a known challenge in computer world that consist in follwing test:
 
 ```
-Write a program that prints the numbers from 1 to 100. But for multiples of three print "Foo" instead of the number and for the multiples of five print "Bar". For numbers which are multiples of both three and five print "FooBar".
+Write a program that prints the numbers from 1 to 100. But for multiples of
+three print "Foo" instead of the number and for the multiples of five print
+"Bar". For numbers which are multiples of both three and five print "FooBar".
 ```
 
-## How to run this code
+## Dependencies
+- PHP 5.6+
+- Composer
+
+## Setup
+Run `$composer install` to generate autoload and install development dependencies.
+
+## Running FooBar
 To run this code, you just need to execute the following command:
 
 ```
 $ php index.php
 ```
 
-**Have no PHP installed? no problem, you can run using docker:**
-```
-$ docker run --rm -it -v $(pwd):$(pwd) -w $(pwd) php:7.2-cli index.php
-```
+## Running tests and linters
 
-## Running tests
-
-### Installing dev dependencies
-
-To execute tests, is necessary to install development dependencies using the following command:
-
-```
-$ composer install
-```
-
-### Executing tests
-
-```
-$ vendor/bin/phpunit
-```
-
-or
-
-```
-$ composer test
-```
+### Running tests
+Run `$ composer test`.
 
 ### Running Code Sniffer
-Just run `$ composer run phpcs`
+Run `$ composer run phpcs`.
 
 ### Running Mess Detector
-Just run `$ composer run phpmd`
+Run `$ composer run phpmd`.
 
 ### Running both Code Sniffer and Mess Detector
-Just run `$ composer run lint`
+Run `$ composer run lint`.
+
+## Considerations
+
+You can use docker instead of php and composer. To run project using docker,
+you just need to replace `$ php ...` for `$ docker run --rm -it -v $(pwd):$(pwd) -w $(pwd) php:7.2-cli-alpine ...`.
+To run tests and linters, you need to replace `$ composer ...` for `$ docker run --rm -it -v $(pwd):$(pwd) -w $(pwd) composer ...`.
