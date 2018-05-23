@@ -19,27 +19,27 @@ class FooBar
     public function run()
     {
         foreach (range(self::STARTS_IN, self::ENDS_IN) as $number) {
-            echo $this->getValueToBePrinted($number) . PHP_EOL;
+            echo $this->findAndReturnValueFor($number) . PHP_EOL;
         }
     }
 
-    public function getValueToBePrinted($number)
+    public function findAndReturnValueFor($number)
     {
-        $valueToBePrinted = '';
+        $value = '';
 
         if ($this->shouldPrintNumber($number)) {
-            $valueToBePrinted .= $number;
+            $value .= $number;
         }
 
         if ($this->shouldPrintFoo($number)) {
-            $valueToBePrinted .= self::STRING_FOO;
+            $value .= self::STRING_FOO;
         }
 
         if ($this->shouldPrintBar($number)) {
-            $valueToBePrinted .= self::STRING_BAR;
+            $value .= self::STRING_BAR;
         }
 
-        return $valueToBePrinted;
+        return $value;
     }
 
     public function shouldPrintNumber($number)

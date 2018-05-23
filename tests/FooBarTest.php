@@ -79,7 +79,7 @@ class FooBarTest extends TestCase
     ) {
         $this->assertEquals(
             $expectedString,
-            $this->fooBar->getValueToBePrinted($number)
+            $this->fooBar->findAndReturnValueFor($number)
         );
     }
 }
